@@ -2,9 +2,10 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Link from '@/components/link/Link';
 
-export default function Home() {
+export default function About() {
     return (
         <Container maxWidth="lg">
             <Box
@@ -19,15 +20,16 @@ export default function Home() {
                 <Typography variant="h4" component="h1" gutterBottom>
                     Next.js example in TypeScript
                 </Typography>
-                <Link href="/about" color="secondary">
-                    Go to the about page
-                </Link>
-                <Link href="/ckbox" color="secondary">
-                    Go to CKBox page
-                </Link>
-                <Link href="/ckeditor" color="secondary">
-                    Go to CKEditor page
-                </Link>
+                <Box sx={{ maxWidth: 'sm' }}>
+                    <Button
+                        variant="contained"
+                        component={Link}
+                        noLinkStyle
+                        href="/"
+                    >
+                        Go to the home page
+                    </Button>
+                </Box>
             </Box>
         </Container>
     );
